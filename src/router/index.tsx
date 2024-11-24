@@ -1,6 +1,9 @@
+/* eslint-disable react-refresh/only-export-components */
 import { createBrowserRouter } from "react-router-dom";
 import MemoPage from "../pages";
-import UseCallBackPage from "../pages/UseCallBackPage";
+import { lazy } from "react";
+
+const UseCallBackPage = lazy(() => import("../pages/UseCallBackPage"));
 
 const routers: ReturnType<typeof createBrowserRouter> = createBrowserRouter([
   {
