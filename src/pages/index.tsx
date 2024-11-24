@@ -69,7 +69,7 @@ const MemoPage: React.FC = (): JSX.Element => {
         label="To Use Memo"
         onClick={useCallback(
           () =>
-            navigate("/use-memo", {
+            navigate("/use-callback", {
               viewTransition: true,
               preventScrollReset: true,
             }),
