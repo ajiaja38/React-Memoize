@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import MemoPage from "../pages";
-import UseMemoPage from "../pages/UseMemoPage";
+import UseCallBackPage from "../pages/UseCallBackPage";
 
 const routers: ReturnType<typeof createBrowserRouter> = createBrowserRouter([
   {
@@ -8,8 +8,8 @@ const routers: ReturnType<typeof createBrowserRouter> = createBrowserRouter([
     path: "/",
   },
   {
-    element: <UseMemoPage />,
-    path: "/use-memo",
+    element: <UseCallBackPage />,
+    path: "/use-callback",
   },
 ]);
 

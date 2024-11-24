@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 interface buttonProps {
   label: string;
@@ -19,4 +19,4 @@ const Button: React.FC<buttonProps> = ({ label, onClick }): JSX.Element => {
   );
 };
 
-export default Button;
+export default memo(Button);

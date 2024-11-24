@@ -66,7 +66,7 @@ const MemoPage: React.FC = (): JSX.Element => {
         <Button label="Tambah" onClick={increment} />
       </div>
       <Button
-        label="To Use Memo"
+        label="To Use Callback"
         onClick={useCallback(
           () =>
             navigate("/use-callback", {
