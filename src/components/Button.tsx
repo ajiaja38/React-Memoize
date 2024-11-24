@@ -6,6 +6,8 @@ interface buttonProps {
 }
 
 const Button: React.FC<buttonProps> = ({ label, onClick }): JSX.Element => {
+  console.log("Button Re Render");
+
   return (
     <button
       type="button"

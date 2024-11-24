@@ -38,9 +38,9 @@ const MemoPage: React.FC = (): JSX.Element => {
   const increment = useCallback(() => setCount(count + 1), [count]);
   const decrement = useCallback(() => setCount(count - 1), [count]);
 
-  const addTodo = () => {
-    SetTodos((todos) => [...todos, newTodo]);
-  };
+  const addTodo = useCallback(() => {
+    SetTodos((prevTodos) => [...prevTodos, newTodo]);
+  }, [newTodo]);
 
   return (
     <div className="container mx-auto">
@@ -56,7 +56,9 @@ const MemoPage: React.FC = (): JSX.Element => {
           className="border p-2"
           placeholder="Tambah Todo"
         />
-        <Button label="Add Todo" onClick={addTodo} />
+        <button type="button" onClick={addTodo}>
+          Tambah
+        </button>
       </div>
 
       <div className="flex space-x-3 my-2">
@@ -65,12 +67,14 @@ const MemoPage: React.FC = (): JSX.Element => {
       </div>
       <Button
         label="To Use Memo"
-        onClick={() =>
-          navigate("/use-memo", {
-            viewTransition: true,
-            preventScrollReset: true,
-          })
-        }
+        onClick={useCallback(
+          () =>
+            navigate("/use-memo", {
+              viewTransition: true,
+              preventScrollReset: true,
+            }),
+          [navigate]
+        )}
       />
     </div>
   );
