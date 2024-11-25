@@ -5,8 +5,6 @@ interface props {
 }
 
 const SearchField: React.FC<props> = ({ onChange }) => {
-  console.log("SearchField Re Render...");
-
   return (
     <input
       type="text"

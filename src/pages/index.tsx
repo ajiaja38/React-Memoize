@@ -3,8 +3,6 @@ import Button from "../components/Button";
 import { NavigateFunction, useNavigate } from "react-router-dom";
 
 const TodoList: React.FC<{ todos: string[] }> = memo(({ todos }) => {
-  console.log(todos);
-
   return (
     <>
       {todos.map((todo: string, index: number) => (
@@ -17,8 +15,6 @@ const TodoList: React.FC<{ todos: string[] }> = memo(({ todos }) => {
 });
 
 const Counter: React.FC<{ counter: number }> = memo(({ counter }) => {
-  console.log(counter);
-
   return <h1>{counter}</h1>;
 });
 
@@ -34,6 +30,9 @@ const MemoPage: React.FC = (): JSX.Element => {
     "Tidur",
   ]);
   const [newTodo, setNewTodo] = useState<string>("");
+
+  console.log(import.meta.env.VITE_APP_TITLE);
+  console.log(import.meta.env.VITE_BASE_URL);
 
   const increment = useCallback(() => setCount(count + 1), [count]);
   const decrement = useCallback(() => setCount(count - 1), [count]);
