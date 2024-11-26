@@ -32,10 +32,10 @@ const UseCallBackPage: React.FC = (): JSX.Element => {
       <h1>Count: {count}</h1>
       <div className="flex gap-3">
         <button className="p-2 bg-yellow-400 rounded" onClick={increment}>
-          Increment
+          Tambah
         </button>
         <button className="p-2 bg-yellow-400 rounded" onClick={decrement}>
-          Decrement
+          Kurang
         </button>
       </div>
       <hr className="my-2" />
