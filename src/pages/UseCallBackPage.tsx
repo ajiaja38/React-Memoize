@@ -6,8 +6,9 @@ const UseCallBackPage: React.FC = (): JSX.Element => {
   const [student, setStudent] = useState<string[]>([
     "M. Aji Perdana",
     "Erlin Novasia",
-    "Reni Widia Anggraini",
     "Frasiska Risma Yolanda",
+    "Reni Widia Anggraini",
+    "Ridwan Alamsyah",
   ]);
 
   const increment = () => setCount((prevCount: number) => prevCount + 1);
