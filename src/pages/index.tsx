@@ -53,7 +53,7 @@ const MemoPage: React.FC = (): JSX.Element => {
             setNewTodo(e.target.value)
           }
           className="border p-2"
-          placeholder="Tambah Todo Baru"
+          placeholder="Tambah Todo"
         />
         <button type="button" onClick={addTodo}>
           Tambah
