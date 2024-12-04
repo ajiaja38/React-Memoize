@@ -28,6 +28,7 @@ const MemoPage: React.FC = (): JSX.Element => {
     "Makan",
     "Chat eyyin",
     "Tidur",
+    "Ngoding",
   ]);
   const [newTodo, setNewTodo] = useState<string>("");
 
